@@ -1,0 +1,39 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Programação Estruturada</title>
+</head>
+<body>
+<h1>Entrada do Programa</h1>
+<button onclick='executarExercicio()'>OK</button>
+<p id="resultado"></p>
+<script>
+    var vetor = [];
+function executarExercicio() {
+// implemente a partir daqui
+// Exemplo de comando de entrada
+    var n = Number(prompt("Informe os números:"));
+    
+var r = inserir(n); // atribua o resultado dos seus algoritmos a r
+document.getElementById('resultado').innerHTML = r;
+}
+
+function inserir(x){
+   var  retorno = "";
+   
+   if(x < 0){
+       retorno = "Erro, entre com um número maior que 0";
+       return retorno;
+   } else if( x != 0 ){
+    vetor.push(x);
+    var x = Number(prompt("Informe os números, para finalizar digite 0:"));
+    retorno = inserir(x);
+    return retorno;
+   }else{
+       return "Os números armazenados são: [" +vetor+ "]";
+   }
+}
+
+</script>
+</body>
+</html>
