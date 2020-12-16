@@ -1,0 +1,37 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Programação Estruturada</title>
+</head>
+<body>
+<h1>Entrada do Programa</h1>
+<button onclick='exibir()'>OK</button>
+<p id="resultado"></p>
+<script>
+    function exibir() {
+    var nlinhas = Number(prompt("Digite um número"));
+    var resultado = texto(nlinhas);
+    document.getElementById("resultado").innerHTML = resultado;
+}
+
+function texto(n) {
+    var retorno = "";
+
+    // Condição de TERMINAÇÃO
+    if (n < 0) {
+        retorno = "Insira um número maior ou igual a zero.";
+
+    // CASO BASE
+    } else if (n == 0) {
+        retorno = "FIM";
+
+    // RECURSÃO (n > 0)
+    } else {
+        retorno = "Linha "+ n + " <br>" + texto(n-1);
+    }
+    return retorno;
+}
+			
+</script>
+</body>
+</html>

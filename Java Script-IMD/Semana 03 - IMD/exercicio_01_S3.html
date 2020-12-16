@@ -1,0 +1,22 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Programação Estruturada</title>
+</head>
+<body>
+<h1>Entrada do Programa</h1>
+<p id = "saida"></p>
+<script>
+// implemente a partir daqui
+    var data = new Date(2020,09,16,09,15);
+    var dia = data.getDate();
+    var mes = data.getMonth();
+    var nomeMes = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    var ano = data.getFullYear();
+    var hora = data.getHours();
+    var min = data.getMinutes();
+
+document.getElementById("saida").innerHTML = "Data: " +dia+ " de " +nomeMes[mes]+ "de "+ano+  "<br> Hora: "+hora+"h"+min;
+</script>
+</body>
+</html>

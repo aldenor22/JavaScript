@@ -1,0 +1,29 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Programação Estruturada</title>
+</head>
+<body>
+<h1>Entrada do Programa</h1>
+N1: <input type="number" id="a" value=""><br />
+
+<button onclick='executarExercicio()'>OK</button>
+<h1 id="resultado"></h1>
+<script>
+function executarExercicio() {
+var a = Number(document.getElementById('a').value);
+//var b = Number(document.getElementById('b').value);
+
+// implemente a partir daqui
+var texto = 0;
+for(i = 1; i< a; i++ ){
+if(a % i == 0){
+    texto = texto+i+"<br>";
+}
+}
+var r = texto; // atribua o resultado dos seus algoritmos a r
+document.getElementById('resultado').innerHTML = r;
+}
+</script>
+</body>
+</html>

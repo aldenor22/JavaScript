@@ -1,0 +1,32 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Programação Estruturada</title>
+</head>
+<body>
+<h1>Calcule sua idade</h1>
+<h2>Sua data de nascimento( ex: Dia =  24, Mês = 07, Ano = 1995) </h2>
+Dia: <input type="number" id="a" value=""><br />
+Mês: <input type="number" id="b" value=""><br />
+Ano: <input type="number" id="c" value=""><br />
+
+<button onclick='executarExercicio()'>OK</button>
+<p id="resultado"></p>
+<script>
+function executarExercicio() {
+var a = Number(document.getElementById('a').value);
+var b = Number(document.getElementById('b').value);
+var c = Number(document.getElementById('c').value);
+
+var anoAtual = new Date();
+var dataNasc = new Date(c,b-1,a); //(c,b-1,a)
+var ms1 = dataNasc.getTime();
+var ms2 = anoAtual.getTime();
+var ano = (ms2-ms1)/31460400000;
+var idade = Math.floor(ano);
+document.getElementById('resultado').innerHTML = "Sua idade é: "+idade+" anos.<br>O.B.S: Se faltar menos de um mês para completar ano, <br>você já terá os anos completos.";
+
+}
+</script>
+</body>
+</html>

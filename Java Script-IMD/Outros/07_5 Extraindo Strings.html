@@ -1,0 +1,36 @@
+<html >
+    <head>
+        <meta charset="UTF-8" />
+        <title>Programação Estruturada - Aula 07</title>
+    </head>
+    <body>
+        <noscript>Seu navegador não suporta JavaScript ou ele está desabilitado.</noscript>
+
+        <h1>Extraindo Strings</h1>
+
+        <p id="saida"></p>
+
+        <script>
+
+        var texto = "ALÔ MUNDO LINDO";             
+        
+        var resultado = texto.slice(4,11);
+        //var resultado = texto.slice(-11, -4);
+        //var resultado = texto.slice(4);
+        //var resultado = texto.slice(-11);
+
+        //var resultado = texto.substring(4,11);
+        //var resultado = texto.substring(4);
+        //var resultado = texto.substring(-1, -10);
+
+        //var resultado = texto.substr(4,7);
+        //var resultado = texto.substr(4);
+        //var resultado = texto.substr(-1, -10);
+
+        //var resultado = texto.charAt(4);
+        var resultado = texto.charAt(100);
+
+        document.getElementById("saida").innerHTML = resultado;    
+        </script>
+    </body>
+</html>

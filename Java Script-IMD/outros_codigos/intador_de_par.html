@@ -1,0 +1,36 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Programação Estruturada</title>
+</head>
+<body>
+<h1>Entrada do Programa</h1>
+<p>Consulte de onde é seu número de telefone.</p>
+Digite um número: <input type="number" id="a" value=""><br />
+<button onclick='executarExercicio()'>OK</button>
+<p id = "texto1"></p>
+
+<script>
+function executarExercicio() {
+var a = Number(document.getElementById('a').value);
+
+// implemente a partir daqui
+texto = 0;
+for(i = 1; ; i++){
+    if(i > a){
+        break;
+    }
+    if(i % 2 != 0){
+        continue;
+    }
+    texto = texto + i + "<br>";
+    
+}
+ 
+    document.getElementById('texto1').innerHTML = texto;
+    }
+
+
+</script>
+</body>
+</html>

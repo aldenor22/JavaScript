@@ -1,0 +1,46 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Programação Estruturada</title>
+</head>
+<body>
+<h1>Entrada do Programa</h1>
+<button onclick='executarExercicio()'>OK</button>
+<p id="resultado"></p>
+<script>
+function executarExercicio() {
+// implemente a partir daqui
+var numeros = [];
+do{
+    var a = Number(prompt("Digite um valor:"));
+    if(a !== 0){
+        numeros[numeros.length] = a
+    }
+}while(a !== 0);
+var array = numeros;
+var valores = [];
+array.forEach((valor,i) =>{
+    var indices = [];
+    var z = array.indexOf(valor);
+
+    do{
+        if(indices.indexOf(z) == -1){
+            indices[indices.length] = z;
+        }
+        z = array.indexOf(valor, z +1);
+    }while(z != -1) ;
+    valores[valores.length] = [indices.length, valor, indies];
+}
+)
+valores = valores.sort().reverse();
+maior = valores[0];
+
+// Exemplo de comando de entrada
+//var a = Number(prompt("Informe um número:"));
+var r = "Valores digitados: " + numeros+"<br valor de maior oorrência: "+maior[1]+"<br Índices: "+ maior[2]; // atribua o resultado dos seus algoritmos a r
+document.getElementById('resultado').innerHTML = r;
+}
+
+</script>
+</body>
+</html>

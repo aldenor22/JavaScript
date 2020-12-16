@@ -1,0 +1,28 @@
+<html>
+    <meta charset="UTF-8" />
+    <title> Programação Estruturada </title>
+<body>
+        <h1> Entrada do programa</h1>
+        N1: <input type="number" id="x" value=""></input>
+        N2: <input type="number" id="y" value=""></input>
+        N3: <input type="number" id="z" value=""></input>
+        <button onclick='executarExercio()'>Ok</button>
+        <p id="resultado"></p>
+
+        <script>
+            function executarExercio(){
+                var a = Number(document.getElementById('x').value);
+                var b = Number(document.getElementById('y').value);
+                var c = Number(document.getElementById('z').value);
+
+                var r = (a*4+b*5+c*6)/15;
+
+                document.getElementById('resultado').innerHTML = `A média ponderada (4, 5 e 6) entre os números ${a}, ${b}, ${c} é ${r}`;
+ 
+            }
+        </script>
+        
+
+</body>
+
+</html>

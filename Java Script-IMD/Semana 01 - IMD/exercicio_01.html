@@ -1,0 +1,27 @@
+<html>
+    <meta charset="UTF-8" />
+    <title> Programação Estruturada </title>
+<body>
+        <h1> Entrada do programa</h1>
+        N1: <input type="number" id="a" value=""></input>
+        N2: <input type="number" id="b" value=""></input>
+        N3: <input type="number" id="c" value=""></input>
+        <button onclick='executarExercio()'>Ok</button>
+        <p id="resultado"></p>
+
+        <script>
+            function executarExercio(){
+                var a = Number(document.getElementById('a').value);
+                var b = Number(document.getElementById('b').value);
+                var c = Number(document.getElementById('c').value);
+
+                var r = -a - ((b + c*a*b)/c*a);
+
+                document.getElementById('resultado').innerHTML = r;
+            }
+        </script>
+        
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<html>
+ 	<head>
+ 		<meta charset="UTF-8" />
+ 		<title>Programação Estruturada</title>
+ 	</head>
+<body>
+ 		<h1>Entrada do Programa</h1>
+ 		<button onclick="ler_numeros()">Clique aqui</button>
+ 		<p id="resultado"></p>
+ 		<p id="msg"></p>
+ 	<script>
+ 		//Declaração do array numeros
+ 		var numeros = []
+ 		//Declaração da função ler_numeros
+ 		function ler_numeros() {
+               //Limpando a mensagem de erro.
+     document.getElementById("msg").innerHTML = " ";
+ 			//Declaração do array numeros
+             var numeros = []
+             
+ 	//Iniciando o tratamento de erro.
+ 	try{
+         	
+ 		//Laço for para limitar o array para receber até 10 numeros.
+ 		for(i = 0; i < 10; i++) {
+ 			//Variável Array numeros recebendo os valores digitados pelo usuário.
+ 			numeros[i] = prompt("Digite o valor:")
+ 			//Condição de erro: se o valor for vazio ou não for um número.
+ 			if(numeros[i] == "" || isNaN(numeros[i]) )	throw "Você precisa informar um número.";
+ 			
+ 		}
+ 	//Código de tratamento de erro.
+	}catch(erro) {
+ 		document.getElementById("msg").innerHTML = "Erro: " + erro;
+ 			
+     }
+     
+    
+
+ 	//Imprimindo os valores do array na ordem em que o usuário digitou.
+ 	document.getElementById("resultado").innerHTML = numeros + "<br>";
+ 	//Com método sort(), colocamos os elementos do array em ordem crescente.
+ 	numeros.sort()
+ 	//Imprimindo os valores do array em ordem crescente.
+     document.getElementById("resultado").innerHTML += numeros;
+   
+
+ }
+ 	</script>
+</body>
+</html>
